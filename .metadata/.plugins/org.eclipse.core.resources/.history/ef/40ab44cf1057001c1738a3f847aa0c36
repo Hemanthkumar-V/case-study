@@ -1,0 +1,5 @@
+package com.casestudy.cartservice.entity;
+
+public class CartItem {
+
+}

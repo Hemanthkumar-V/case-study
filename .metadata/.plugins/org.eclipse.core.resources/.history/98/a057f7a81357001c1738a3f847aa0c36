@@ -1,0 +1,5 @@
+package com.casestudy.orderservice.service;
+
+public class OrderService {
+
+}
