@@ -33,4 +33,9 @@ public class ProductService {
 		 productRepository.deleteById(productId);
 	}
 
+	public Product getByProductCategory(String productCategory) {
+		// TODO Auto-generated method stub
+		return productRepository.getByProductCategory(productCategory);
+	}
+
 }

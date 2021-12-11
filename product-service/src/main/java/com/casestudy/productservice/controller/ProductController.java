@@ -46,6 +46,13 @@ public class ProductController {
 	{
 		return  productService.getProductById(productId);
 	}
+	
+	@GetMapping("/getproduct/{productCategory}")
+	public Product getByProductCategory(@PathVariable("productCategory") String productCategory)
+	{
+		return  productService.getByProductCategory(productCategory);
+	}
+	
 	@GetMapping("/deleteProduct/{id}")
 	public void deleteById(@PathVariable("id") int productId)
 	{

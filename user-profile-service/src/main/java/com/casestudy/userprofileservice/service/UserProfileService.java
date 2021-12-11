@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.client.RestTemplate;
 
+import com.casestudy.userprofileservice.common.Product;
+import com.casestudy.userprofileservice.common.TransactionResponse;
 import com.casestudy.userprofileservice.entity.UserProfile;
 import com.casestudy.userprofileservice.repository.UserProfileRepository;
 @Service
@@ -18,8 +21,9 @@ public class UserProfileService {
 	
 	@Autowired
 	private UserProfileRepository userProfileRepository;
-	
-	
+	@Autowired
+	private RestTemplate restTemplate;
+
 
 	public UserProfile saveUser(UserProfile userProfile) {
 		
@@ -73,6 +77,8 @@ public class UserProfileService {
 	
 	
 	
+	
+	
 
 
 
@@ -89,6 +95,28 @@ public class UserProfileService {
 		
 		return userProfileRepository.findByMobile(mobile);
 	}
+
+
+
+
+//	public TransactionResponse getAllProducts() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
+
+
+
+	public TransactionResponse getAllProducts() 
+	{
+		Product product=new Product();
+		Product[] productResponse=restTemplate.getForObject("http://localhost:8081/product/getProducts", Product[].class);
+		
+		return new TransactionResponse(productResponse);
+	}
+
+
+
 
 
 
