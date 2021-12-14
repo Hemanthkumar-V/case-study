@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.casestudy.productservice.entiry.Product"/>
-    <fullyQualifiedTypeName name="javax.annotation.Generated"/>
-    <fullyQualifiedTypeName name="com.casestudy.cartservice.service.CartService"/>
     <fullyQualifiedTypeName name="com.casestudy.cartservice.repository.CartRepository"/>
     <fullyQualifiedTypeName name="com.casestudy.cartservice.entity.CartItem"/>
     <fullyQualifiedTypeName name="com.casestudy.cartservice.vo.ResponseTemplateVo"/>
@@ -29,7 +26,6 @@
     <fullyQualifiedTypeName name="com.casestudy.categoryservice.service.CategoryService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="springfox.documentation.service.ApiInfo"/>
@@ -44,9 +40,6 @@
     <fullyQualifiedTypeName name="springfox.documentation.spring.web.plugins.Docket"/>
     <fullyQualifiedTypeName name="springfox.documentation.spi.DocumentationType"/>
     <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.Field"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="com.casestudy.categoryservice.common.TransactionResponse"/>
     <fullyQualifiedTypeName name="io.swagger.models.HttpMethod"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpMethod"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpEntity"/>
@@ -56,8 +49,15 @@
     <fullyQualifiedTypeName name="com.casestudy.userprofileservice.common.Product"/>
     <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
     <fullyQualifiedTypeName name="com.casestudy.userprofileservice.common.TransactionResponse"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
-    <fullyQualifiedTypeName name="com.casestudy.categoryservice.common.Product"/>
     <fullyQualifiedTypeName name="com.casestudy.categoryservice.entity.Category"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.FeignClient"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="com.casestudy.categoryservice.feign.ProductProxy"/>
+    <fullyQualifiedTypeName name="com.casestudy.categoryservice.common.TransactionResponse"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.casestudy.categoryservice.common.Product"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 </qualifiedTypeNameHistroy>

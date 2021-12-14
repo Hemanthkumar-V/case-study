@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Document("order")
 public class Order {
-
+@Id
 	private int orderId;
 	@Field
 	private String  orderName;

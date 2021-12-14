@@ -105,7 +105,7 @@ public class UserProfileController {
 	}
 	
 	@GetMapping("/mobile/{mobile}")
-	public UserProfile findByMobileNumber(@PathVariable long mobile)
+	public UserProfile findByMobileNumber(@PathVariable("mobile") long mobile)
 	{
 		return userProfileService.findByMobileNumber(mobile);
 	}

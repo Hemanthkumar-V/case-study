@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.casestudy.categoryservice.common.TransactionResponse;
 import com.casestudy.categoryservice.entity.Category;
 import com.casestudy.categoryservice.service.CategoryService;
 
@@ -34,18 +35,47 @@ public class CategoryController {
 		return categoryService. addCategory(category);
 	}
 	
-//	@GetMapping("/getCategorywithProduct")
-//	public  TransactionResponse getCategoryWithProduct(String categoryName)
-//	{
-//		return categoryService. getCategoryWithProduct(categoryName);
-//		
-//	}
+	@GetMapping("/getCategorywithProduct")
+	public  TransactionResponse getCategoryWithProduct(String categoryName)
+	{
+	return categoryService. getCategoryWithProduct(categoryName);
+	
+}
 	
 	
 	@GetMapping("/getAllCategory")
 	public List<Category> getAllCategory(Category category)
 	{
 		return  categoryService.getAllCategory(category);
+		
+	}
+//	
+//	@GetMapping("/getAllProduct")
+//	public TransactionResponse getAllProduct()
+//	{
+//		return  categoryService.getAllProduct();
+//		
+//	}
+	
+//	@GetMapping("/getAllProductByCategoryName/{ categoryName}")
+//	public TransactionResponse getAllProductsByCategoryName(@PathVariable(" categoryName")  String categoryName)
+//	{
+//		return  categoryService.getAllProductsByCategoryName(categoryName);
+//		
+//	}
+	
+	
+//	public TransactionResponse getCategoryWithProduct()
+//	{
+//		return categoryService. getCategoryWithProduct();
+//		
+//	}
+	
+	
+	@RequestMapping("/getAllProducts")
+	public TransactionResponse getAllProducts()
+	{
+		return categoryService.getAllProducts();
 		
 	}
 	@GetMapping("/getById/{id}")
