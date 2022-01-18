@@ -1,0 +1,73 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div>
+    <h2 style="text-align: center;color: firebrick; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><strong>Admin Panel</strong></h2>
+</div>
+
+<div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="text" class="search-query form-control" placeholder="Search By Product Category"  name="productCategory" [(ngModel)]="productCategory"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" >
+                                            <span class=" glyphicon glyphicon-search" (click)="getProductByCategory()"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>ProductId</th>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Product Category</th>
+                            <th>Product Type</th>
+                            <th>product Description</th>
+                            <th>Price</th>
+                            <th>Rating</th>
+                            <th>Reviews</th>
+                            <th>Action</th>
+                            <th>Update Product</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of product; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.productId}}</td>
+                            <td style="width: 25%;">  <img src="../assets/images/shopping image.jpeg" alt="" style="height: 40px;width: 40px;"></td>
+                            <td>{{item.productName}}</td>
+                            
+                            <td style="width: 25%;">{{item.productCategory}}</td>
+                            <td>{{item.productType}}</td>
+                            <td>{{item.productDescription}}</td>
+                            <th style="width: 12%;">{{item.price}}</th>
+                            <td style="width: 12%;">{{item.rating}}</td>
+                            <td style="width: 12%;">{{item.reviews}}</td>
+                            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteProduct(item.productId)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+                            <td>
+                                <button  class="btn btn-primary" (click)="updateProduct(item.productId)">UPDATE</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                            
+                            <td><button routerLink="/addProduct" class="btn btn-primary" style="text-align: center;">Add More Products to Shop</button></td>
+                            
+                           
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

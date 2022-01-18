@@ -1,5 +1,0 @@
-package com.casestudy.orderservice.repository;
-
-public class OrderRepository {
-
-}

@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.casestudy.cartservice.common.ResponseTemplateVo;
 import com.casestudy.cartservice.entity.CartItem;
 import com.casestudy.cartservice.service.CartService;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/cart")
 public class CartController {
@@ -28,34 +30,38 @@ public class CartController {
 		return "hello cart iam hetre";
 	}
 	
-	@PostMapping("/save")
-	public CartItem saveCartItem(@RequestBody CartItem cartItem)
+	@PostMapping("/addToCart")
+	public CartItem addToCart(@RequestBody CartItem cartItem)
 	{
-		return cartService.saveCartItem(cartItem);
+		return cartService.addToCart(cartItem);
 		
 	}
 	
 	@GetMapping("/getCart")
-	public List<CartItem> getAllCartItems(CartItem cartItem)
+	public List<CartItem> getAllCartItems()
 	{
-		return cartService.getAllCartItems(cartItem);
+		return cartService.getAllCartItems();
 	}
 	
 	
 	@GetMapping("/getCart/{id}")
-	public Optional<CartItem> getByCartId(@PathVariable("id") int cartId)
+	public CartItem getByCartId(@PathVariable("id") int cartId)
 	{
 		return cartService.getByCartId(cartId);
 	}
 	
-	@PutMapping("/update/{id}")
+	@PutMapping("/updateCart/{id}")
 	public CartItem updateCart(@PathVariable("id") int cartId, @RequestBody CartItem cartItem)
 	{
+		cartItem.setCartId(cartItem.getCartId());
 		return cartService.updateCart(cartItem);
 		
 	}
 	
-	
+	@DeleteMapping("/deleteCartItem/{id}")
+	public String deleteCartItem(@PathVariable("id") int id) {
+		return cartService.deleteCartItem(id);
+	}
 	
 	
 

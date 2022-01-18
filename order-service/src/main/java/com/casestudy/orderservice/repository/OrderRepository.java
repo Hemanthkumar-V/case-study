@@ -7,5 +7,7 @@ import com.casestudy.orderservice.entity.Order;
 
 @Repository
 public interface OrderRepository extends MongoRepository<Order, Integer>{
+	
+	public Order getOrderByOrderPrice(double orderPrice);
 
 }

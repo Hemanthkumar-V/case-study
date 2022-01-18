@@ -11,26 +11,57 @@ public class UserProfile {
 	@Field
 	private String uName;
 	@Field
+	private String password;
+	@Field
 	private String uAddress;
 	@Field
 	private long mobile;
 	@Field
 	private String email;
+	@Field
+	private String role;
+	
+
 	
 	public UserProfile()
 	{
 		
 	}
+
+
+
+
+
+
 	
-	
-	public UserProfile(int uId, String uName, String uAddress, long mobile, String email) {
-		
+
+
+
+
+
+
+	public UserProfile(int uId, String uName, String password, String uAddress, long mobile, String email,
+			String role) {
+		super();
 		this.uId = uId;
 		this.uName = uName;
+		this.password = password;
 		this.uAddress = uAddress;
 		this.mobile = mobile;
 		this.email = email;
+		this.role = role;
 	}
+
+
+
+
+
+
+
+
+
+
+
 
 
 	public int getuId() {
@@ -38,9 +69,31 @@ public class UserProfile {
 	}
 
 
+
+
+
+
+
+
+
+
+
+
+
 	public void setuId(int uId) {
 		this.uId = uId;
 	}
+
+
+
+
+
+
+
+
+
+
+
 
 
 	public String getuName() {
@@ -48,9 +101,63 @@ public class UserProfile {
 	}
 
 
+
+
+
+
+
+
+
+
+
+
+
 	public void setuName(String uName) {
 		this.uName = uName;
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+
+
+
+
+
+
+
+
+
 
 
 	public String getuAddress() {
@@ -58,9 +165,31 @@ public class UserProfile {
 	}
 
 
+
+
+
+
+
+
+
+
+
+
+
 	public void setuAddress(String uAddress) {
 		this.uAddress = uAddress;
 	}
+
+
+
+
+
+
+
+
+
+
+
 
 
 	public long getMobile() {
@@ -68,9 +197,31 @@ public class UserProfile {
 	}
 
 
+
+
+
+
+
+
+
+
+
+
+
 	public void setMobile(long mobile) {
 		this.mobile = mobile;
 	}
+
+
+
+
+
+
+
+
+
+
+
 
 
 	public String getEmail() {
@@ -78,10 +229,62 @@ public class UserProfile {
 	}
 
 
+
+
+
+
+
+
+
+
+
+
+
 	public void setEmail(String email) {
 		this.email = email;
-	} 
-	
-	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+
+
+
+
+
+
+
+
 
 }

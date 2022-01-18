@@ -21,24 +21,39 @@ public class CartService {
 	
 	
 
-	public CartItem saveCartItem(CartItem cartItem) {
+	public CartItem addToCart(CartItem cartItem) {
 		
-		return cartRepository.save(cartItem);
+		return cartRepository.insert(cartItem);
 	}
 
-	public List<CartItem> getAllCartItems(CartItem cartitems) {
+	public List<CartItem> getAllCartItems() {
 		
 		return cartRepository.findAll() ;
 	}
 
-	public Optional<CartItem> getByCartId(int cartId) {
+	public CartItem getByCartId(int cartId) {
 		
-		return cartRepository.findById(cartId);
+		List<CartItem>cartItembyId= cartRepository.findAll();
+		CartItem cartItems=null;
+		for(CartItem cartItem:cartItembyId)
+		{
+			if(cartItem.getCartId()==cartId)
+				cartItems=cartItem;
+		}
+		return cartItems;
+		
+		
 	}
 
 	public CartItem updateCart(CartItem cartItem) {
 		
 		return cartRepository.save(cartItem);
+	}
+
+	public String deleteCartItem(int id) {
+		
+		 cartRepository.deleteById(id); 
+		 return "Item deleted from cart succefully";
 	}
 
 

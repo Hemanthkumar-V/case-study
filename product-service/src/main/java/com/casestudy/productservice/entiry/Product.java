@@ -8,23 +8,28 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class Product {
 	@Id
 	private int productId;
-	@Field
+	
 	private String productName;
-	@Field
+	
 	private  String productCategory;
-	@Field
+	
 	private String  productType;
-	@Field
+	
 	private String  productDescription;
-	@Field
+	
 	private double price;
 	
+
+	private int rating;
+	
+	private String reviews;
 	public Product()
 	{
 		
 	}
+	
 	public Product(int productId, String productName, String productCategory, String productType,
-			String productDescription, double price) {
+			String productDescription, double price, int rating, String reviews) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
@@ -32,6 +37,22 @@ public class Product {
 		this.productType = productType;
 		this.productDescription = productDescription;
 		this.price = price;
+		this.rating = rating;
+		this.reviews = reviews;
+	}
+	
+	
+	public int getRating() {
+		return rating;
+	}
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+	public String getReviews() {
+		return reviews;
+	}
+	public void setReviews(String reviews) {
+		this.reviews = reviews;
 	}
 	public int getProductId() {
 		return productId;

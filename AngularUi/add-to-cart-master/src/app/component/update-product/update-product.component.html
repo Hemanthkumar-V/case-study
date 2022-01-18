@@ -1,0 +1,74 @@
+<div>
+  <h2 style="color: cadetblue;">{{message}}</h2>
+</div>
+  <div class="container" style="width: 45%; height: 50%;background-color: rgb(255, 230, 0);margin-top: 20px;">
+  
+      <h2 style="font-style: italic;font-family: 'Times New Roman', Times, serif; font-size: 30px;text-align: center;color: darkmagenta;"><strong> Update Product In The Shopping Cart</strong></h2>
+    
+      <form #registerform="ngForm" (ngSubmit)="updateProduct()" >
+        <div class="form-group">
+    
+          <label for="productId">productId</label>
+    
+          <input type="productId" class="form-control" placeholder="Enter productId" name="productId" [(ngModel)]="product.productId" #productId='ngModel' required>
+    
+        </div>
+        <div class="form-group">
+    
+          <label for="productName">productName</label>
+    
+          <input type="text" class="form-control" placeholder="Enter productName" name="productName" [(ngModel)]="product.productName" #productName='ngModel' required>
+    
+        </div>
+    
+        <div class="form-group">
+    
+          <label for="productCategory">productCategory:</label>
+    
+          <input type="text" class="form-control"  placeholder="Enter productCategory" name="productCategory" [(ngModel)]="product.productCategory" #productCategory='ngModel' required>
+    
+        </div>
+        <div class="form-group">
+    
+          <label for="productType">productType:</label>
+    
+          <input type="productType" class="form-control"  placeholder="Enter productType" name="productType" [(ngModel)]="product.productType" #productType='ngModel' required>
+    
+        </div>
+        <div class="form-group">
+    
+          <label for="productDescription">productDescription:</label>
+    
+          <input type="text" class="form-control"  placeholder="Enter your productDescription" name="productDescription" [(ngModel)]="product.productDescription" #productDescription='ngModel' required>
+    
+        </div>
+        <div class="form-group">
+    
+          <label for="price">price:</label>
+    
+          <input type="price" class="form-control"  placeholder="Enter your price" name="email" [(ngModel)]="product.price" #price='ngModel' required>
+    
+        </div>
+        <div class="form-group">
+    
+          <label for="rating">rating:</label>
+    
+          <input type="text" class="form-control"  placeholder="Enter rating" name="role" [(ngModel)]="product.rating" #rating='ngModel' required>
+    
+        </div>
+        
+        <div class="form-group">
+    
+          <label for="reviews">reviews:</label>
+    
+          <input type="text" class="form-control"  placeholder="Enter reviews" name="reviews" [(ngModel)]="product.reviews" #reviews='ngModel' required>
+    
+        </div>
+        
+      <div>
+        <button type="submit" class="btn btn-warning" style="margin-top: 20px; text-align: center;margin-bottom: 20px;">Update Product ShoppingCart</button>
+      </div>
+      </form>
+    
+    </div>
+  

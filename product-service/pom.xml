@@ -11,7 +11,7 @@
 	<groupId>com.case-study</groupId>
 	<artifactId>product-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>product-service</name>
+	<name>order-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -29,6 +29,16 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		
+		
+		
+		<!-- https://mvnrepository.com/artifact/com.paypal.sdk/rest-api-sdk -->
+<dependency>
+    <groupId>com.paypal.sdk</groupId>
+    <artifactId>rest-api-sdk</artifactId>
+    <version>1.14.0</version>
+</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -40,7 +50,18 @@
 			<scope>test</scope>
 		</dependency>
 		
-	<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    <version>3.1.0</version>
+</dependency>
 <dependency>
     <groupId>io.springfox</groupId>
     <artifactId>springfox-swagger2</artifactId>
@@ -55,25 +76,7 @@
 </dependency>
 
 		
-		
-		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
-<dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-    <version>3.1.0</version>
-</dependency>
-
-<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-mongodb</artifactId>
-		</dependency>
-
-
-		
 	</dependencies>
-	
-	
-	
 
 	<build>
 		<plugins>
@@ -92,7 +95,8 @@
 		</plugins>
 	</build>
 	
-	<dependencyManagement>
+	
+<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -103,4 +107,5 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 </project>
